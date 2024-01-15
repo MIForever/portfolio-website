@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400&family=Poppins:wght@400;600;700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: #393E46;
+    --second-bg-color: #222831;
+    --text-color: #EEEEEE;
+    --second-text-color: #ff4102;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+.header {
+    background-color: var(--second-bg-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.2rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 600;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.navbar {
+    display: inline-block;
+}
+
+.navbar a {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-right: 4rem;
+    transition: color ease .5s;
+}
+
+.navbar a:last-child {
+    margin-right: 0;
+}
+
+.navbar .active {
+    color: var(--second-text-color);
+}
+
+.navbar a:hover {
+    color: var(--second-text-color);
+}
+
+.logo-first-part {
+    color: var(--text-color);
+}
+
+.logo-first-second {
+    color: var(--second-text-color);
+}
+
+#menu-icon {
+    font-size: 2.6rem;
+    color: var(--text-color);
+    display: none;
+}
