@@ -21,6 +21,11 @@ body {
     background-color: var(--bg-color);
 }
 
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
 .header {
     background-color: var(--second-bg-color);
     position: fixed;
