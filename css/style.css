@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400&family=Poppins:wght@400;600;700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400;500;600;700&display=swap');
+@font-face {
+    font-family: 'Anita semi-square';
+    src: url('fonts/anita-semi-square.ttf');
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -10,11 +16,39 @@
     font-family: 'Poppins', sans-serif;
 }
 
-:root {
+ :root {
     --bg-color: #393E46;
     --second-bg-color: #222831;
     --text-color: #EEEEEE;
     --second-text-color: #ff4102;
+}
+
+@keyframes slide-right {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slide-left {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes glow {
+    0%,
+    100% {
+        box-shadow: none;
+    }
+    50% {
+        box-shadow: 0 0 1rem var(--second-text-color);
+    }
 }
 
 body {
@@ -54,6 +88,9 @@ section {
 .navbar a {
     font-size: 1.2rem;
     color: var(--text-color);
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
     margin-right: 4rem;
     transition: color ease .5s;
 }
@@ -62,19 +99,56 @@ section {
     margin-right: 0;
 }
 
-.navbar .active {
+.navbar a::before,
+.navbar a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+
+.navbar a::before {
+    background-color: var(--second-text-color);
+    height: 2px;
+    bottom: 0;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.navbar a::after {
+    content: attr(data-replace);
+    height: 100%;
+    top: 0;
+    transform-origin: 100% 50%;
+    transform: translate3d(200%, 0, 0);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
     color: var(--second-text-color);
 }
 
-.navbar a:hover {
-    color: var(--second-text-color);
+.navbar a:hover::before {
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
 }
 
-.logo-first-part {
+.navbar a:hover::after {
+    transform: translate3d(0, 0, 0);
+}
+
+.navbar a span {
+    display: inline-block;
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.navbar a:hover span {
+    transform: translate3d(-200%, 0, 0);
+}
+
+.logo {
     color: var(--text-color);
 }
 
-.logo-first-second {
+.logo span {
     color: var(--second-text-color);
 }
 
@@ -94,9 +168,33 @@ section {
     width: 35vw;
 }
 
+.home-img img {
+    animation: 1s slide-left;
+    animation-delay: .5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    transform: translateX(200%);
+}
+
+.home-content .slide-div {
+    animation: 1s slide-right;
+    animation-delay: .5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    transform: translateX(-200%);
+}
+
 .home-content h3 {
     font-size: 2.2rem;
     font-weight: 700;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 2rem;
+}
+
+.home-content span {
+    color: var(--second-text-color);
 }
 
 .home-content h1 {
@@ -121,4 +219,74 @@ section {
     font-size: 1.8rem;
     color: var(--second-text-color);
     margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+
+.social-media a:hover {
+    background-color: var(--second-text-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 1rem var(--second-text-color);
+}
+
+#downl-cv-btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--second-text-color);
+    border-radius: 4rem;
+    font-size: 1.2rem;
+    color: var(--bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    animation-name: glow;
+    animation-iteration-count: infinite;
+    animation-duration: 2.3s;
+}
+
+.projects {
+    color: var(--text-color);
+}
+
+.veronica-project {
+    font-family: 'Anita semi-square', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.veronica-project .description {
+    display: flex;
+    align-items: center;
+}
+
+#try-veronica {
+    font-size: 1.1em;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: var(--second-text-color);
+    animation: glow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    padding: .7em 3em;
+    border-radius: 4rem;
+}
+
+footer {
+    height: 10vh;
+    background-color: var(--second-bg-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+footer img {
+    height: 50%;
+    border-radius: 50%;
+}
+
+footer h4 {
+    font-family: 'Tektur', sans-serif;
+    font-weight: 300;
 }

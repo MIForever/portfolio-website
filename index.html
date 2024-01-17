@@ -11,35 +11,58 @@
 
 <body>
     <header class="header">
-        <a href="#" class="logo"><span class="logo-first-part">MI</span><span class="logo-first-second">Forever</span></a>
+        <a href="#" class="logo">MI<span>Forever</span></a>
         <i class='bx bx-menu' id="menu-icon"></i>
         <nav class="navbar">
-            <a href="index.html" class="active">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="contact.html">Contact</a>
+            <a data-replace="Home" href="#home"><span>Home</span></a>
+            <a data-replace="About" href="#"><span>About</span></a>
+            <a data-replace="Projects" href="#"><span>Projects</span></a>
+            <a data-replace="Services" href="#"><span>Services</span></a>
+            <a data-replace="Portfolio" href="#"><span>Portfolio</span></a>
+            <a data-replace="Contact" href="#"><span>Contact</span></a>
         </nav>
     </header>
     <section class="home" id="home">
         <div class="home-content">
-            <h3>Hello, It's Me</h3>
-            <h1>Musayev Inoyatullo</h1>
-            <h3>And I'm a <span>Frontend Developer</span></h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam quae distinctio a dolore nemo blanditiis illum accusamus.</p>
-            <div class="social-media">
-                <a href="#"><i class='bx bxl-telegram'></i></a>
-                <a href="#"><i class='bx bxl-instagram'></i></a>
-                <a href="#"><i class='bx bxl-linkedin'></i></a>
-                <a href="#"><i class='bx bxl-facebook'></i></a>
+            <div class="slide-div">
+                <h3>Hello, It's Me</h3>
+                <h1>Musayev Inoyatullo</h1>
+                <h3>And I'm a <span>Sowtfare Engineer</span> and <span>Data scientist</span></h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam quae distinctio a dolore nemo blanditiis illum accusamus.</p>
+                <div class="social-media">
+                    <a href="#"><i class='bx bxl-telegram'></i></a>
+                    <a href="https://www.instagram.com/mif.forever/"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://www.linkedin.com/in/inoyatullo-musayev-01b672241/"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                </div>
+                <a href="#" id="downl-cv-btn">Download CV</a>
             </div>
-            <a href="#" class="btn">Download CV</a>
         </div>
         <div class="home-img">
             <img src="images/iron-man.png" alt="">
         </div>
     </section>
-    <footer></footer>
+    <section class="projects">
+        <h2>Projects</h2>
+        <div class="veronica-project">
+            <div class="description">
+                <div class="veronica-content">
+                    <h3>F.R.I.D.A.Y</h3>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis provident quibusdam recusandae perspiciatis sit fugiat porro perferendis enim sunt exercitationem natus excepturi maxime accusantium animi, nostrum dolor molestiae laborum dolorum?
+                    </p>
+                </div>
+                <div class="orb-animation">
+                    <img src="images/orb.gif" alt="">
+                </div>
+            </div>
+            <a href="" class="" id="try-veronica">> Try it!</a>
+        </div>
+    </section>
+    <footer>
+        <img src="images/logo.png" alt="logo">
+        <h4>MIF &copy 2024</h4>
+    </footer>
 
     <script src="js/script.js"></script>
 </body>
