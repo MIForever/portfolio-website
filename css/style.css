@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400&family=Poppins:wght@400;600;700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400;500;600;700&display=swap');
 @font-face {
-    font-family: 'Anita semi-square';
-    src: url('fonts/anita-semi-square.ttf');
+    font-family: 'Anita Semi-square';
+    src: url('../fonts/anita-semi-square.ttf');
 }
 
 * {
@@ -16,7 +16,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
- :root {
+:root {
     --bg-color: #393E46;
     --second-bg-color: #222831;
     --text-color: #EEEEEE;
@@ -247,7 +247,7 @@ section {
 }
 
 .veronica-project {
-    font-family: 'Anita semi-square', sans-serif;
+    font-family: 'Anita Semi-square', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
