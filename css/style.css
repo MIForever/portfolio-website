@@ -246,11 +246,30 @@ section {
     color: var(--text-color);
 }
 
+.projects h2 {
+    font-size: 5em;
+    margin-bottom: 1.5em;
+}
+
 .veronica-project {
-    font-family: 'Anita Semi-square', sans-serif;
+    font-family: 'Anita Semi-square';
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.veronica-project h3,
+p {
+    font-family: 'Anita Semi-square';
+}
+
+.veronica-project h3 {
+    font-size: 3rem;
+    margin-bottom: 1.3em;
+}
+
+.veronica-project p {
+    font-size: 1.2em;
 }
 
 .veronica-project .description {
