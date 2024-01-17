@@ -45,9 +45,11 @@
     0%,
     100% {
         box-shadow: none;
+        background-color: var(--second-text-color);
     }
     50% {
-        box-shadow: 0 0 1rem var(--second-text-color);
+        box-shadow: 0 0 2.3rem var(--second-text-color);
+        background-color: #ff2402;
     }
 }
 
