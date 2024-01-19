@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Portfolio Website</title>
 </head>
 
@@ -15,11 +16,9 @@
         <i class='bx bx-menu' id="menu-icon"></i>
         <nav class="navbar">
             <a data-replace="Home" href="#home"><span>Home</span></a>
-            <a data-replace="About" href="#"><span>About</span></a>
-            <a data-replace="Projects" href="#"><span>Projects</span></a>
-            <a data-replace="Services" href="#"><span>Services</span></a>
-            <a data-replace="Portfolio" href="#"><span>Portfolio</span></a>
-            <a data-replace="Contact" href="#"><span>Contact</span></a>
+            <a data-replace="About" href="#about"><span>About</span></a>
+            <a data-replace="Portfolio" href="#portfolio"><span>Portfolio</span></a>
+            <a data-replace="Contact" href="#contact"><span>Contact</span></a>
         </nav>
     </header>
     <section class="home" id="home">
@@ -30,10 +29,10 @@
                 <h3>And I'm a <span>Sowtfare Engineer</span> and <span>Data scientist</span></h3>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam quae distinctio a dolore nemo blanditiis illum accusamus.</p>
                 <div class="social-media">
-                    <a href="#"><i class='bx bxl-telegram'></i></a>
-                    <a href="https://www.instagram.com/mif.forever/"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://t.me/raising_G"><i class='bx bxl-telegram'></i></a>
+                    <a href="https://instagram.com/mif.forever/"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://github.com/MIForever"><i class='bx bxl-github'></i></a>
                     <a href="https://www.linkedin.com/in/inoyatullo-musayev-01b672241/"><i class='bx bxl-linkedin'></i></a>
-                    <a href="#"><i class='bx bxl-facebook'></i></a>
                 </div>
                 <a href="#" id="downl-cv-btn">Download CV</a>
             </div>
@@ -42,14 +41,31 @@
             <img src="images/iron-man.png" alt="">
         </div>
     </section>
-    <section class="projects">
-        <h2>Projects</h2>
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="images/iron-man.png" alt="">
+        </div>
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Software Developer</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero magni quasi fugit consectetur soluta sunt aliquam possimus nesciunt quia? Similique ex error molestias unde autem earum quas, officiis porro, quam maiores eaque? Recusandae quisquam
+                tenetur obcaecati facere. Harum laboriosam neque odit nisi accusantium voluptatum, numquam excepturi!</p>
+            <a href="#" id="about-me-read-more">Read More</a>
+        </div>
+    </section>
+    <section class="portfolio" id="portfolio">
+        <div class="portfolio-h2">
+            <h2>Portfolio</h2>
+        </div>
+        <div class="line"></div>
         <div class="veronica-project">
-            <div class="description">
+            <div class="veronica-description">
                 <div class="veronica-content">
                     <h3>F.R.I.D.A.Y</h3>
                     <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis provident quibusdam recusandae perspiciatis sit fugiat porro perferendis enim sunt exercitationem natus excepturi maxime accusantium animi, nostrum dolor molestiae laborum dolorum?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam reprehenderit facilis unde temporibus fugiat, perspiciatis cupiditate consequuntur illo officiis totam quas modi veritatis provident. Eius fugit, tenetur dolore maiores veniam quae quasi animi.
+                        Vitae quam quibusdam delectus sequi saepe. Libero dolor qui iste ab fugit soluta aliquam vel. Commodi non culpa laboriosam accusantium quidem dolore quaerat, placeat excepturi facere in consequatur eaque obcaecati deserunt magnam
+                        doloribus quod assumenda sunt vel itaque omnis officia! Quos vel veritatis iure illo, delectus ab ducimus numquam odit fugiat aspernatur quo expedita dolorum vitae repudiandae, cupiditate praesentium exercitationem.
                     </p>
                 </div>
                 <div class="orb-animation">
@@ -57,6 +73,17 @@
                 </div>
             </div>
             <a href="" class="" id="try-veronica">> Try it!</a>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <div class="heading">
+            <h2>Contact <span>Me!</span></h2>
+        </div>
+        <div class="socials">
+            <a href="https://t.me/raising_G"><i class="bx bxl-telegram" id="telegram"></i><h5>Telegram</h5></a>
+            <a href="https://instagram.com/mif.forever/"><i class="bx bxl-instagram" id="instagram"></i><h5>Instagram</h5></a>
+            <a href="https://github.com/MIForever"><i class="bx bxl-github" id="github"></i><h5>GitHub</h5></a>
+            <a href="https://www.linkedin.com/in/inoyatullo-musayev-01b672241/"><i class="bx bxl-linkedin" id="linkedin"></i><h5>Linked In</h5></a>
         </div>
     </section>
     <footer>
