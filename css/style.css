@@ -5,6 +5,11 @@
     src: url('../fonts/anita-semi-square.ttf');
 }
 
+@font-face {
+    font-family: 'Singtton Vintage';
+    src: url('../fonts/singtton-vintage.ttf');
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -59,7 +64,7 @@ section {
     z-index: 1000;
 }
 
-.header.sticky{
+.header.sticky {
     border-bottom: .1rem solid rgba(0, 0, 0, .2);
 }
 
@@ -84,7 +89,7 @@ section {
     transition: color ease .5s;
 }
 
-.navbar .active{
+.navbar .active {
     color: var(--second-text-color);
 }
 
@@ -163,15 +168,15 @@ section {
     animation: floatImage 4s ease-in-out infinite;
 }
 
-@keyframes floatImage{
-    0%, 100%{
+@keyframes floatImage {
+    0%,
+    100% {
         transform: translateY(0);
     }
-    50%{
+    50% {
         transform: translateY(-2.4rem);
     }
 }
-
 
 .home-content h3 {
     font-size: 2.2rem;
@@ -334,7 +339,7 @@ section {
     gap: 1rem;
 }
 
-.veronica-description{
+.veronica-description {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -342,8 +347,72 @@ section {
     gap: 2em;
 }
 
-.orb-animation img{
+.orb-animation img {
     width: 30vw;
+}
+
+.lumosa-project {
+    margin-top: 10em;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+.lumosa-project p,
+.lumosa-project li,
+.lumosa-project h4,
+.lumosa-project h3 {
+    font-family: 'Singtton Vintage';
+}
+
+.lumosa-project h4 {
+    font-size: 1.7em;
+}
+
+.lumosa-project li {
+    font-size: 1.4em;
+}
+
+.lumosa-project h3 {
+    font-size: 4rem;
+    margin-bottom: 1.3em;
+}
+
+.lumosa-project p {
+    font-size: 1.8em;
+    letter-spacing: 1px;
+}
+
+.lumosa-image img {
+    border-radius: 20%;
+    width: 30vw;
+}
+
+.lumosa-container {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: auto;
+    gap: 20px;
+}
+
+.item-1 {
+    grid-column: 1/3;
+}
+
+.item-2 {
+    grid-column: 1;
+}
+
+.item-3 {
+    grid-column: 2;
+}
+
+.item-4 {
+    grid-column: 1/3;
+}
+
+#lumosa-try-btn {
+    margin-top: 6em;
 }
 
 .effect {
@@ -355,7 +424,23 @@ section {
     overflow: hidden;
 }
 
-#try-veronica {
+.more-button {
+    font-size: 1.3em;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: var(--second-text-color);
+    animation: glow;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    padding: .7em 3em;
+    border-radius: 1rem;
+    width: 270px;
+    margin-top: 10em;
+}
+
+.try-button {
     font-size: 1em;
     font-weight: 600;
     text-decoration: none;
@@ -371,7 +456,6 @@ section {
 
 .effect.effect-1 {
     transition: all 0.2s linear 0s;
-
     &:before {
         content: "\f178";
         font-family: FontAwesome;
@@ -387,13 +471,11 @@ section {
         width: 40px;
         transition: all 0.2s linear 0s;
     }
-
     &:hover {
         text-indent: -20px;
-        
         &:before {
-        opacity: 1;
-        text-indent: 0px;
+            opacity: 1;
+            text-indent: 0px;
         }
     }
 }
@@ -421,7 +503,7 @@ section {
     gap: 1em;
 }
 
-.socials a div{
+.socials a div {
     display: flex;
     justify-content: center;
     min-width: 175px;
@@ -493,7 +575,7 @@ footer {
 }
 
 .footer-text img {
-    height:70%;
+    height: 70%;
     border-radius: 50%;
 }
 
@@ -515,32 +597,29 @@ footer {
     color: var(--text-color);
 }
 
-@media (max-width:1200px){
-    html{
+@media (max-width:1200px) {
+    html {
         font-size: 85%;
     }
 }
 
 @media (max-width:991px) {
-    .header{
+    .header {
         padding: 2rem 3%;
     }
-
-    section{
+    section {
         padding: 10rem 5% 2rem;
     }
-
-    .footer{
+    .footer {
         padding: 2rem 3%;
     }
 }
 
 @media (max-width:768px) {
-    #menu-icon{
+    #menu-icon {
         display: block;
     }
-
-    .navbar{
+    .navbar {
         position: absolute;
         top: 100%;
         left: 0;
@@ -551,78 +630,90 @@ footer {
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
         display: none;
     }
-
-    .navbar.active{
+    .navbar.active {
         display: block;
     }
-
-    .navbar a{
+    .navbar a {
         display: block;
         font-size: 2rem;
         margin: 3rem 0;
     }
-
-    .home{
+    .home {
         flex-direction: column;
     }
-
-    .home-content h3{
+    .home-content h3 {
         font-size: 1.8rem;
     }
-
-    .home-content h1{
+    .home-content h1 {
         font-size: 3rem;
     }
-
-    .home-img img{
+    .home-img img {
         width: 70vw;
         margin-top: 4rem;
     }
-
-    .about{
+    .about {
         flex-direction: column-reverse;
     }
-
-    .about img{
-        width:70vw;
+    .about img {
+        width: 70vw;
         margin-top: 4rem;
     }
-
-    .veronica-description{
+    .veronica-description {
         flex-direction: column-reverse;
     }
-
-    .veronica-description p{
+    .veronica-description p {
         text-align: center;
     }
-
-    .orb-animation img{
+    .orb-animation img {
         width: 70vw;
     }
-
-
-    .contact h2{
+    .lumosa-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .lumosa-container>* {
+        grid-column: 1;
+    }
+    .lumosa-project h3 {
+        font-size: 3rem;
+        margin-bottom: 1.3em;
+    }
+    .lumosa-image {
+        grid-row: 2;
+    }
+    .lumosa-image img {
+        width: 70vw;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+        margin-top: 4rem;
+    }
+    .item-2 {
+        margin-top: 3rem;
+    }
+    #lumosa-try-btn {
+        margin-top: 4rem;
+    }
+    .contact h2 {
         margin-left: 1rem;
         font-size: 4rem;
     }
-
 }
 
-
-@media (max-width: 510px){
-    .socials{
+@media (max-width: 510px) {
+    .socials {
         grid-template-columns: 1fr;
     }
 }
 
-@media (max-width:450px){
-    html{
+@media (max-width:450px) {
+    html {
         font-size: 70%;
     }
 }
 
-@media (max-with:330px){
-    .navbar a{
+@media (max-with:330px) {
+    .navbar a {
         font-size: .5rem;
     }
 }
