@@ -6,6 +6,11 @@
 }
 
 @font-face {
+    font-family: 'Venus Plant';
+    src: url('../fonts/venus_plant.ttf');
+}
+
+@font-face {
     font-family: 'Singtton Vintage';
     src: url('../fonts/singtton-vintage.ttf');
 }
@@ -43,11 +48,6 @@
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
-}
-
-section {
-    min-height: 100vh;
-    padding: 10rem 9% 2rem;
 }
 
 .header {
@@ -156,15 +156,23 @@ section {
     display: none;
 }
 
-.home {
+section {
+    min-height: 100vh;
+    padding: 0 9% 0;
+}
+
+#home {
     background-color: var(--second-bg-color);
+    padding-top: 5em;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 3rem;
 }
 
 .home-img img {
-    width: 30vw;
+    width: 20vw;
+    border-radius: 10px;
     animation: floatImage 4s ease-in-out infinite;
 }
 
@@ -178,26 +186,26 @@ section {
     }
 }
 
-.home-content h3 {
+#home-content h3 {
     font-size: 2.2rem;
     font-weight: 700;
 }
 
-.home-content h3:nth-of-type(2) {
+#home-content h3:nth-of-type(2) {
     margin-bottom: 2rem;
 }
 
-.home-content span {
+#home-content span {
     color: var(--second-text-color);
 }
 
-.home-content h1 {
+#home-content h1 {
     font-size: 3em;
     font-weight: 700;
     line-height: 1.3;
 }
 
-.home-content p {
+#home-content p {
     font-size: 1.3rem;
 }
 
@@ -237,15 +245,15 @@ section {
     animation-duration: 2.3s;
 }
 
-.about {
+#about {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 4rem;
+    gap: 3rem;
 }
 
 .about-img img {
-    width: 35vw;
+    width: 25vw;
 }
 
 .heading {
@@ -281,7 +289,7 @@ section {
     border-radius: 4rem;
 }
 
-.portfolio {
+#portfolio {
     background-color: var(--second-bg-color);
     color: var(--text-color);
     padding: 10rem 9%;
@@ -306,32 +314,35 @@ section {
     background-color: rgb(189, 189, 189);
 }
 
-.veronica-project {
+#friday-project {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 4em;
 }
 
-.veronica-project h3,
-.veronica-project p {
-    font-family: 'Anita Semi-square';
+#friday-project h3 {
+    font-family: 'Venus Plant';
 }
 
-.veronica-project p {
+#friday-project p {
+    font-family: 'Anita semi-square';
+}
+
+#friday-project p {
     line-height: 1.5em;
 }
 
-.veronica-project h3 {
+#friday-project h3 {
     font-size: 3rem;
     margin-bottom: 1.3em;
 }
 
-.veronica-project p {
+#friday-project p {
     font-size: 1.2em;
 }
 
-.veronica-content {
+#friday-content {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -339,7 +350,7 @@ section {
     gap: 1rem;
 }
 
-.veronica-description {
+#friday-description {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -347,38 +358,38 @@ section {
     gap: 2em;
 }
 
-.orb-animation img {
+#orb-animation img {
     width: 30vw;
 }
 
-.lumosa-project {
+#lumosa-project {
     margin-top: 10em;
     flex-direction: column;
     display: flex;
     align-items: center;
 }
 
-.lumosa-project p,
-.lumosa-project li,
-.lumosa-project h4,
-.lumosa-project h3 {
+#lumosa-project p,
+#lumosa-project li,
+#lumosa-project h4,
+#lumosa-project h3 {
     font-family: 'Singtton Vintage';
 }
 
-.lumosa-project h4 {
+#lumosa-project h4 {
     font-size: 1.7em;
 }
 
-.lumosa-project li {
+#lumosa-project li {
     font-size: 1.4em;
 }
 
-.lumosa-project h3 {
+#lumosa-project h3 {
     font-size: 4rem;
     margin-bottom: 1.3em;
 }
 
-.lumosa-project p {
+#lumosa-project p {
     font-size: 1.8em;
     letter-spacing: 1px;
 }
@@ -388,7 +399,7 @@ section {
     width: 30vw;
 }
 
-.lumosa-container {
+#lumosa-container {
     display: grid;
     grid-template-columns: 60% 40%;
     grid-template-rows: auto;
@@ -480,7 +491,7 @@ section {
     }
 }
 
-.contact {
+#contact {
     display: flex;
     flex-direction: column;
     padding: 8rem 5% 2rem;
@@ -608,7 +619,7 @@ footer {
         padding: 2rem 3%;
     }
     section {
-        padding: 10rem 5% 2rem;
+        padding: 0 5% 0;
     }
     .footer {
         padding: 2rem 3%;
@@ -618,6 +629,12 @@ footer {
 @media (max-width:768px) {
     #menu-icon {
         display: block;
+    }
+    .home-img {
+        padding-top: 5em;
+    }
+    .home-img img {
+        width: 80vw;
     }
     .navbar {
         position: absolute;
@@ -638,43 +655,43 @@ footer {
         font-size: 2rem;
         margin: 3rem 0;
     }
-    .home {
+    #home {
         flex-direction: column;
     }
-    .home-content h3 {
+    #home-content h3 {
         font-size: 1.8rem;
     }
-    .home-content h1 {
+    #home-content h1 {
         font-size: 3rem;
     }
-    .home-img img {
+    #home-img img {
         width: 70vw;
         margin-top: 4rem;
     }
-    .about {
+    #about {
         flex-direction: column-reverse;
     }
-    .about img {
+    #about img {
         width: 70vw;
         margin-top: 4rem;
     }
-    .veronica-description {
+    #friday-description {
         flex-direction: column-reverse;
     }
-    .veronica-description p {
+    #friday-description p {
         text-align: center;
     }
-    .orb-animation img {
+    #orb-animation img {
         width: 70vw;
     }
-    .lumosa-container {
+    #lumosa-container {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
     }
-    .lumosa-container>* {
+    #lumosa-container>* {
         grid-column: 1;
     }
-    .lumosa-project h3 {
+    #lumosa-project h3 {
         font-size: 3rem;
         margin-bottom: 1.3em;
     }
@@ -694,7 +711,7 @@ footer {
     #lumosa-try-btn {
         margin-top: 4rem;
     }
-    .contact h2 {
+    #contact h2 {
         margin-left: 1rem;
         font-size: 4rem;
     }
